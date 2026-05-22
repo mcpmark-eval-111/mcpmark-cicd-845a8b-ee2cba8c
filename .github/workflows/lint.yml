@@ -10,10 +10,10 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
@@ -24,5 +24,5 @@ jobs:
       - name: Install ESLint globally
         run: npm install -g eslint
 
-      - name: Run ESLint on src/
+      - name: Run ESLint
         run: eslint 'src/**/*.js'

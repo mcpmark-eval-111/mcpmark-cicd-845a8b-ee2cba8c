@@ -1,13 +1,13 @@
-// Example file with intentional linting violations
-// This file should fail the ESLint check defined in .eslintrc.json
+// This file intentionally contains linting violations
+// to demonstrate the CI workflow catching them.
 
-var unusedVariable = "this variable is never used";
+var unusedVariable = "I am never used";
+const message = "Hello from example.js"
+console.log(message)
 
 function greet(name) {
-    console.log("Hello, " + name)
-    var anotherUnused = 42
-    return "Greetings"
+    var unusedParam = "unused"
+    return "Hi, " + name
 }
 
-const message = "Welcome to the project"
 greet("World")
